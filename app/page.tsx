@@ -7,7 +7,7 @@ import { fuels, yearsOfProduction } from '@/contants'
 import { fetchCars } from '@/utils'
 import Image from 'next/image'
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: any) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year || 2022,
