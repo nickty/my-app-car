@@ -14,7 +14,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
   const hanndleUpdateParams = (e: { title: string; value: string }) => {
     const newPathname = updateSearchParams(title, e.value.toLowerCase())
 
-    router.push(newPathname)
+    router.push(newPathname, { scroll: false })
   }
   return (
     <div className="w-fit">
